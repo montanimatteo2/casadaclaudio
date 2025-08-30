@@ -47,4 +47,4 @@ jobs:
           # Imposta il push a true in modo che carichi l'immagine dopo averla generata con successo
           push: true
           # Assegna un tag/etichetta all'immagine in DockerHub.
-          tags: your-dockerhub-username/casadaclaudio:latest
+          tags: montanimatteo/casadaclaudio:latest
