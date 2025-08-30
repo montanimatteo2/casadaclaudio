@@ -1,0 +1,50 @@
+# Nome del workflow che si vede nel tab "Actions" di GitHub
+name: Build and Push Docker Image
+
+# Dice quale evento fa partire il workflow
+on:
+  # "git push" è l'evento scatenante
+  push:
+    # Si attiva solo per i push su rami specifici
+    branches:
+      - main # This runs every time you push to the 'main' branch
+
+# Lista dei lavori da eseguire
+jobs:
+  # L'ID univoco dell'unico lavoro che viene fatto qui
+  build-and-push:
+    # Nome del job, che sarà visibile su GitHub
+    name: Build and Push to Docker Hub
+    # Dice che il job deve girare su una VM con Ubuntu Linux
+    runs-on: ubuntu-latest
+
+    # Sequenza dei passi che il lavoro deve fare
+    steps:
+      # Nome del primo passo
+      - name: Checkout code
+        # Azione predefinita per scaricare il mio codice dal repository sulla VM
+        uses: actions/checkout@v4
+      
+      # Nome del secondo passo
+      - name: Log in to Docker Hub
+        # Azione predefinita per fare il login al registro Docker
+        uses: docker/login-action@v3
+        # Con le credenziali
+        with:
+          # Usa il secret salvato su GitHub per lo username di Docker
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          # Usa il secret salvato su GitHub per il token di accesso
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      
+      # Nome del terzo passo
+      - name: Build and push Docker image
+        # Azione principale che si occupa di costruire l'immagine Docker e caricarla su DockerHub
+        uses: docker/build-push-action@v5
+        # Con i parametri necessari per le azioni di build e push
+        with:
+          # Dice a Docker di usare la cartella principale come contesto per la build (dove c'è il Dockerfile)
+          context: .
+          # Imposta il push a true in modo che carichi l'immagine dopo averla generata con successo
+          push: true
+          # Assegna un tag/etichetta all'immagine in DockerHub.
+          tags: your-dockerhub-username/casadaclaudio:latest

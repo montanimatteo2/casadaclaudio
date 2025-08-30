@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title data-lang-key="meta_title">Caricamento...</title>
+    <meta name="description" content="" data-lang-key="meta_description">
+
+    <meta property="og:title" content="" data-lang-key="meta_title">
+    <meta property="og:description" content="" data-lang-key="meta_description">
+    <meta property="og:image" content="img/og-image.jpg">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/simple-lightbox.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="header-main">
+                <h1 data-lang-key="site_title">Casa da Claudio</h1>
+                <p class="header-subtitle" data-lang-key="booking_info">Per informazioni e prenotazioni contattaci:</p>
+                <div class="contact-info">
+                    <span><a href="mailto:info@casadaclaudio.com">info@casadaclaudio.com</a></span>
+                    <span><a href="mailto:booking@casadaclaudio.com">booking@casadaclaudio.com</a></span>
+                    <span><a href="tel:+393288175934">+39 328 81 75 934</a></span>
+                </div>
+            </div>
+            <div class="lang-switcher">
+                <button id="lang-it">🇮🇹 IT</button>
+                <button id="lang-en">🇬🇧 EN</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="gallery-section"><h2 data-lang-key="gallery_title"></h2><div class="carousel">
+            <div class="carousel-inner"></div>
+            <button class="carousel-control prev">❮</button> <button class="carousel-control next">❯</button> </div></section>
+        <section id="description-section"><h2 data-lang-key="description_title"></h2><p data-lang-key="description_content"></p></section>
+        <section id="details-section"><h2 data-lang-key="details_title"></h2><div class="details-grid"><div class="detail-item"><h3 data-lang-key="details_room_type_title"></h3><p data-lang-key="details_room_type_content"></p></div><div class="detail-item"><h3 data-lang-key="details_wifi_title"></h3><p data-lang-key="details_wifi_content"></p></div><div class="detail-item"><h3 data-lang-key="details_ac_title"></h3><p data-lang-key="details_ac_content"></p></div><div class="detail-item"><h3 data-lang-key="details_appliances_title"></h3><p data-lang-key="details_appliances_content"></p></div><div class="detail-item"><h3 data-lang-key="details_kitchen_title"></h3><p data-lang-key="details_kitchen_content"></p></div></div></section>
+        <section id="rules-section"><h2 data-lang-key="rules_title"></h2><div class="details-grid"><div class="detail-item"><h3 data-lang-key="rules_pets_title"></h3><p data-lang-key="rules_pets_content"></p></div><div class="detail-item"><h3 data-lang-key="rules_smoking_title"></h3><p data-lang-key="rules_smoking_content"></p></div><div class="detail-item"><h3 data-lang-key="rules_linens_title"></h3><p data-lang-key="rules_linens_content"></p></div><div class="detail-item full-width"><h3 data-lang-key="points_of_interest_title"></h3><p data-lang-key="points_of_interest_content"></p></div></div></section>
+        
+        <section id="booking-info-section">
+            <h2 data-lang-key="booking_section_title">Apertura e Pagamenti</h2>
+            <div class="details-grid">
+                <div class="detail-item"><h3 data-lang-key="booking_period_title"></h3><p data-lang-key="booking_period_content"></p></div>
+                <div class="detail-item"><h3 data-lang-key="booking_payment_title"></h3><p data-lang-key="booking_payment_content"></p></div>
+            </div>
+            <div class="min-stay-notice">
+                <p data-lang-key="booking_min_stay_content"></p>
+            </div>
+        </section>
+
+        <section id="map-section">
+            <h2 data-lang-key="map_title">Dove Siamo</h2>
+            <p class="map-disclaimer" data-lang-key="map_disclaimer"></p>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!4v1756545751194!6m8!1m7!1sdvUyPpkuemyhaFy-FrB_8Q!2m2!1d46.03257062247555!2d11.78538148131696!3f83.6706933935485!4f-19.033770029258633!5f0.7820865974627469"
+                    width="100%" 
+                    height="350"
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Mappa della posizione">
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <h3 data-lang-key="site_title">Casa da Claudio</h3>
+            <div class="contact-info-footer">
+                <span><a href="mailto:info@casadaclaudio.com">info@casadaclaudio.com</a> | <a href="mailto:booking@casadaclaudio.com">booking@casadaclaudio.com</a></span>
+                <span><a href="tel:+393288175934">+39 328 81 75 934</a></span>
+            </div>
+            <p>© 2025 <span data-lang-key="footer_rights"></span></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/simple-lightbox.min.js"></script>
+</body>
+</html>
